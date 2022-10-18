@@ -43,7 +43,7 @@ public class EstimateController {
         model.addAttribute("manufacturers", manufacturers);
         model.addAttribute("products", products);
 
-        log.info("estimate: {}", products);;
+        log.debug("estimate: {}", products);;
 
         return "estimate";
     }
