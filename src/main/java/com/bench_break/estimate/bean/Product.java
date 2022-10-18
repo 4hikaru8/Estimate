@@ -21,5 +21,5 @@ public class Product {
     // 単価
     private Integer item_price;
     // 備考
-    private String coment;
+    private String comment;
 }

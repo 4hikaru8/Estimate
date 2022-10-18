@@ -64,10 +64,10 @@
                     <tbody>
                         <tr th:each="product : ${products}">
                             <th scope="row" th:text="${product.item_id}">1</th>
-                            <td th:text="${product.item_}">島津製作所</td>
-                            <td th:text="${product.item_id}">ジャイロセンサー</td>
-                            <td th:text="${product.item_id}">1000円</td>
-                            <td th:text="${product.item_id}">慣性を測定する装置</td>
+                            <td th:text="${product.manufactuer.manufactuerName}"></td>
+                            <td th:text="${product.item_name}"></td>
+                            <td th:text="${product.item_price}"></td>
+                            <td th:text="${product.comment}"></td>
                         </tr>
                     </tbody>
                 </table>

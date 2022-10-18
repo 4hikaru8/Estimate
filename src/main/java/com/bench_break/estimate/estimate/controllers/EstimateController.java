@@ -27,11 +27,15 @@ public class EstimateController {
         List<Manufacturer> manufacturers = new ArrayList<>();
         manufacturers.add(new Manufacturer("01", "村田製作所"));
         manufacturers.add(new Manufacturer("02", "島津製作所"));
+        manufacturers.add(new Manufacturer("03", "オムロン"));
+        manufacturers.add(new Manufacturer("04", "三菱テクノロジーズ"));
 
         // 商品
         List<Product> products = new ArrayList<>();
         products.add(new Product(1, "ジャイロセンサー", new Manufacturer("02", "島津製作所"), 5000, null));
         products.add(new Product(2, "人感センサー", new Manufacturer("01", "村田製作所"), 2000, null));
+        products.add(new Product(3, "温度センサー", new Manufacturer("03", "オムロン"), 500, "型番TA-2312"));
+        products.add(new Product(4, "赤外線センサー", new Manufacturer("04", "三菱テクノロジーズ"), 3200, "新型"));
 
         model.addAttribute("manufacturers", manufacturers);
         model.addAttribute("products", products);
