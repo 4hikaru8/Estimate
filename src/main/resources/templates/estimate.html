@@ -31,10 +31,7 @@
                 <div class="mb-3">
                     <label for="company" class="form-label">取引先</label>
                     <select class="form-select" id="company" aria-label="Default select example">
-                        <option selected>村田製作所</option>
-                        <option value="1">オムロン</option>
-                        <option value="2">島津製作所</option>
-                        <option value="3">三菱テクノロジー</option>
+                        <option th:each="manufacturer : ${manufacturers}" th:text="${manufacturer.manufactuerName}" th:value="${manufacturer.manufactuer_id}"></option>
                     </select>
                 </div>
             </div>
@@ -65,12 +62,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>島津製作所</td>
-                            <td>ジャイロセンサー</td>
-                            <td>1000円</td>
-                            <td>慣性を測定する装置</td>
+                        <tr th:each="product : ${products}">
+                            <th scope="row" th:text="${product.item_id}">1</th>
+                            <td th:text="${product.item_}">島津製作所</td>
+                            <td th:text="${product.item_id}">ジャイロセンサー</td>
+                            <td th:text="${product.item_id}">1000円</td>
+                            <td th:text="${product.item_id}">慣性を測定する装置</td>
                         </tr>
                     </tbody>
                 </table>
