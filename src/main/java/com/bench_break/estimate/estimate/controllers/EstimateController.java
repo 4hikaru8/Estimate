@@ -12,7 +12,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.bench_break.estimate.bean.Manufacturer;
 import com.bench_break.estimate.bean.Product;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Controller
+@Slf4j
 public class EstimateController {
 
     @RequestMapping("/hello")
@@ -39,6 +42,8 @@ public class EstimateController {
 
         model.addAttribute("manufacturers", manufacturers);
         model.addAttribute("products", products);
+
+        log.info("estimate: {}", products);;
 
         return "estimate";
     }
